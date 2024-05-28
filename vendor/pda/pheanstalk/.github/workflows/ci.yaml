@@ -1,0 +1,59 @@
+---
+name: Continuous integration
+on:
+  pull_request:
+    branches:
+      - v4
+      - v5
+jobs:
+  tests:
+    name: Tests
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        php: [ '8.1', '8.2' ]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+      - name: Install dependencies including dev
+        uses: ramsey/composer-install@v2
+      - name: Tests
+        run: composer test
+        env:
+          PHP_VERSION: ${{ matrix.php }}
+      - uses: codecov/codecov-action@v3.1.1
+        with:
+          files: ./tests/coverage/coverage.xml
+          flags: unittests
+          name: codecov-umbrella
+  code_style:
+    name: Check code style
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.1'
+      - uses: ramsey/composer-install@v2
+      - name: Test code style
+        run: vendor/bin/ecs
+  static_analysis:
+    name: Static analysis
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.1'
+      - name: Install dependencies
+        uses: ramsey/composer-install@v2
+      - name: Static analysis (phpstan)
+        run: vendor/bin/phpstan
+      - name: Static analysis (psalm)
+        run: vendor/bin/psalm

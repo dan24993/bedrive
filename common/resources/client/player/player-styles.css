@@ -1,0 +1,7 @@
+.player-bottom-gradient {
+  background-image: linear-gradient(to top, rgb(0 0 0 / 0.5), 10%, transparent, 95%, rgb(0 0 0 / 0.3));
+}
+
+.player-bottom-text-shadow {
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}

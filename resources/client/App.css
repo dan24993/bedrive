@@ -1,0 +1,32 @@
+@import '../../common/resources/client/common.css';
+@import 'drive/file-view/file-grid/file-grid.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.landing-container {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+@media screen and (min-width: 768px) {
+  .landing-container {
+    max-width: 750px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .landing-container {
+    max-width: 970px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .landing-container {
+    max-width: 1170px;
+  }
+}

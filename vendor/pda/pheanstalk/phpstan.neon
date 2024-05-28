@@ -1,0 +1,11 @@
+parameters:
+  level: 9
+  paths:
+    - src
+    - tests
+  treatPhpDocTypesAsCertain: false
+  reportUnmatchedIgnoredErrors: true
+  bootstrapFiles:
+    - tests/sa-bootstrap.php
+includes:
+  - phpstan-baseline.neon

@@ -1,0 +1,47 @@
+.image-file-color {
+  color: #f44336;
+}
+
+.audio-file-color {
+  color: #ff9800;
+}
+
+.video-file-color {
+  color: #f44336;
+}
+
+.text-file-color {
+  color: #2196f3;
+}
+
+.default-file-color {
+  color: #757575;
+}
+
+.folder-file-color {
+  color: #fbc02d;
+}
+
+.shared-folder-file-color {
+  color: #fbc02d;
+}
+
+.archive-file-color {
+  color: #fbc02d;
+}
+
+.pdf-file-color {
+  color: #f44336;
+}
+
+.power-point-file-color {
+  color: #f57f17;
+}
+
+.word-file-color {
+  color: #2196f3;
+}
+
+.spreadsheet-file-color {
+  color: #00897b;
+}

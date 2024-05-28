@@ -1,0 +1,50 @@
+{
+    "name": "laravel/slack-notification-channel",
+    "description": "Slack Notification Channel for laravel.",
+    "keywords": ["laravel", "notifications", "slack"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Taylor Otwell",
+            "email": "taylor@laravel.com"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "guzzlehttp/guzzle": "^7.0",
+        "illuminate/http": "^9.0|^10.0|^11.0",
+        "illuminate/notifications": "^9.0|^10.0|^11.0",
+        "illuminate/support": "^9.0|^10.0|^11.0"
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.0",
+        "orchestra/testbench": "^7.0|^8.0|^9.0",
+        "phpstan/phpstan": "^1.10",
+        "phpunit/phpunit": "^9.0|^10.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Illuminate\\Notifications\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Illuminate\\Tests\\Notifications\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "3.x-dev"
+        },
+        "laravel": {
+            "providers": [
+                "Illuminate\\Notifications\\SlackChannelServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

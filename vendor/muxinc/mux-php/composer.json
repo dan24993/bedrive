@@ -1,0 +1,39 @@
+{
+    "name": "muxinc/mux-php",
+    "version": "3.17.0",
+    "description": "Mux is how developers build online video. This API encompasses both Mux Video and Mux Data functionality to help you build your video-related projects better and faster than ever before.",
+    "keywords": [
+        "php",
+        "sdk",
+        "rest",
+        "api",
+        "video",
+        "streaming"
+    ],
+    "homepage": "https://mux.com",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mux SDK Team",
+            "homepage": "https://mux.com",
+            "email": "sdks@mux.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4.0",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "guzzlehttp/guzzle": "^7.4.5"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.0 || ^9.0",
+        "friendsofphp/php-cs-fixer": "^3.14"
+    },
+    "autoload": {
+        "psr-4": { "MuxPhp\\" : "MuxPhp/" }
+    },
+    "autoload-dev": {
+        "psr-4": { "MuxPhp\\Test\\" : "test/" }
+    }
+}
